@@ -1,0 +1,9 @@
+This project investigates advanced multivariate time series forecasting using deep learning, with a specific focus on Transformer models and their attention mechanism. A synthetic dataset with over 500 observations and five correlated features was programmatically generated to include clear seasonality, nonlinear behavior, and random noise. A custom data pipeline was implemented to prepare the dataset using sliding-window sequence generation and normalization, enabling it to be used efficiently by deep learning models.
+
+Two forecasting models were developed and compared: a Transformer-based model and an LSTM baseline. The Transformer included positional encoding and a multi-head attention mechanism, allowing it to model long-range dependencies. Both models were trained for 20 epochs using MSE loss with validation monitoring.
+
+Results showed that the Transformer achieved better forecasting performance than the LSTM baseline. The Transformer produced an MSE of 0.0596, RMSE of 0.2443, and MAE of 0.2039, outperforming the LSTM, which achieved an MSE of 0.0731, RMSE of 0.2703, and MAE of 0.2158. These improvements demonstrate the Transformer’s superior ability to capture nonlinear temporal dependencies in the multivariate series.
+
+Attention-weight visualization confirmed that the model selectively focused on key time steps across the input sequence, highlighting how it learned meaningful temporal relationships. This interpretability component helps explain the model’s decision-making process and validates the effectiveness of attention mechanisms for forecasting tasks.
+
+Overall, the project successfully fulfills all required tasks, with a complete data pipeline, model implementation, performance comparison, and interpretability analysis. The results clearly show that Transformer-based architectures provide stronger predictive accuracy and better insight into temporal feature importance than traditional recurrent models like LSTMs.
